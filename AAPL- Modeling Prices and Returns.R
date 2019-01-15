@@ -1,38 +1,10 @@
-#==================================================#
-#                                                  #
-#     Apple: Modeling Prices and Returns           #
-#                                                  #
-#==================================================#
-
-#==================================================#
-#Arithmetic vs Geometric returns - Part A
-#==================================================#
-#Let
-P1 <- 105
-P0 <- 100
-
-#Calculate the 10-days Arithmetic returns
-R10 <- (P1-P0)/P0
-print(R10)
-
-#Calculate the 10-days Geometric returns
-r10 <- log(P1/P0)
-print(r10)
-
-#Compare log and Arithmetic returns
-R10 == r10
-R10 >= r10
-
-#From log-returns to simple
-exp(r10)-1
-
-#From simple returns to Geometric returns
-log(1+R10)
+#===================================================================================#
+#                                                                                   #
+#     Apple: Modeling Prices and Returns (Arithmetic vs Geometric Returns)          #
+#                                                                                   #
+#===================================================================================#
 
 
-#==================================================#
-#Arithmetic vs Geometric returns - Part B
-#==================================================#
 # Download the time series for Apple (AAPL)
 start <- as.Date("2018-01-01")
 end <- as.Date("2018-10-01")
